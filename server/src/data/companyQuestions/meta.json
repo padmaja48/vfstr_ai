@@ -1,0 +1,31 @@
+{
+  "company": "Meta",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Given a string, find the longest substring without repeating characters. Explain approach and complexity.",
+          "type": "coding",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Tell me about a time you optimized something for performance in a project.",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "How would you design the news feed ranking system at a high level?",
+          "type": "system_design",
+          "source": "reported 2023"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design an ads delivery system that handles real-time bidding at scale.",
+          "type": "system_design",
+          "source": "reported 2024"
+        }
+      ]
+    }
+  }
+}

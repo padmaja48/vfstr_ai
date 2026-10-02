@@ -1,0 +1,31 @@
+{
+  "company": "TCS",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Explain OOP concepts using a project from your resume.",
+          "type": "technical",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Write pseudocode to find the second largest element in an array.",
+          "type": "coding",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Why do you want to join TCS and how does your background fit our digital projects?",
+          "type": "behavioral",
+          "source": "reported 2024"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Describe a production issue you handled in a client project and how you communicated with stakeholders.",
+          "type": "behavioral",
+          "source": "reported 2024"
+        }
+      ]
+    }
+  }
+}

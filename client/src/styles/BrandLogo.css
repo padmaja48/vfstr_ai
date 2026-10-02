@@ -1,0 +1,85 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.brand-logo__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: #0b1b3d;
+  color: #fff;
+  font-family: var(--ff-display, 'Times New Roman', Times, serif);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: -0.04em;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.18);
+}
+
+.brand-logo__text {
+  font-family: var(--ff-display, 'Times New Roman', Times, serif);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+  color: var(--title, #0b1b3d);
+  line-height: 1;
+}
+
+.brand-logo__dot {
+  color: var(--accent, #1d4ed8);
+}
+
+.brand-logo--sidebar {
+  max-width: 200px;
+}
+
+.brand-logo--sidebar .brand-logo__text {
+  font-size: 17px;
+}
+
+.brand-logo--auth {
+  margin-bottom: 28px;
+}
+
+.brand-logo--auth .brand-logo__mark {
+  width: 44px;
+  height: 44px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.brand-logo--auth .brand-logo__text {
+  font-size: 26px;
+}
+
+.brand-logo--admin .brand-logo__mark {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+}
+
+.brand-logo--admin .brand-logo__text {
+  font-size: 16px;
+}
+
+.brand-logo--admin.brand-logo--collapsed {
+  gap: 0;
+}
+
+.brand-logo--admin.brand-logo--collapsed .brand-logo__mark {
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo--sidebar {
+    display: none;
+  }
+}

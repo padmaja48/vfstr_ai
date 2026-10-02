@@ -1,0 +1,46 @@
+{
+  "company": "Google",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Given a binary tree, find the maximum path sum. Explain your approach and analyze time and space complexity.",
+          "type": "coding",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Tell me about the most challenging bug you fixed in a project. How did you isolate the root cause?",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "How would you design a rate limiter for an API serving millions of requests per second?",
+          "type": "system_design",
+          "source": "reported 2023"
+        },
+        {
+          "question": "Explain the difference between processes and threads. When would you prefer one over the other?",
+          "type": "technical",
+          "source": "reported 2024"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design Google Docs-style real-time collaborative editing at scale.",
+          "type": "system_design",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Describe a technical decision you made that had long-term impact on your team or product.",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Find the shortest path in a weighted graph with negative edges. Which algorithm applies and why?",
+          "type": "coding",
+          "source": "reported 2023"
+        }
+      ]
+    }
+  }
+}

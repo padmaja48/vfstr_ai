@@ -1,0 +1,61 @@
+{
+  "company": "Amazon",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Tell me about a time you had to learn something new quickly to deliver a project on deadline.",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Given an array of integers and a target sum, how would you find whether two numbers add up to the target? Walk through your approach and complexity.",
+          "type": "coding",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Explain how you would design a URL shortener. What components would you need and what trade-offs would you consider?",
+          "type": "system_design",
+          "source": "reported 2023"
+        },
+        {
+          "question": "Describe a situation where you disagreed with a teammate on a technical approach. How did you handle it?",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "How would you debug a service that suddenly started returning 500 errors after a deployment?",
+          "type": "technical",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Implement a function to check if a string has balanced parentheses. Explain edge cases and time complexity.",
+          "type": "coding",
+          "source": "reported 2023"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design a notification system that can send millions of emails and push notifications reliably.",
+          "type": "system_design",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Tell me about the most complex production incident you resolved. What was your role and what changed afterward?",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "How would you implement an LRU cache? Discuss data structures, concurrency, and eviction policy.",
+          "type": "coding",
+          "source": "reported 2023"
+        },
+        {
+          "question": "Walk me through a system you designed where you had to optimize for both latency and cost.",
+          "type": "technical",
+          "source": "reported 2024"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "default": {
+    "label": "your target company",
+    "focusAreas": [
+      "Resume-backed project explanation",
+      "Role fundamentals",
+      "Clear communication",
+      "Problem-solving approach"
+    ],
+    "notes": [
+      "Use this as preparation guidance. The live interview still adapts to the resume, role, and answers."
+    ]
+  },
+  "tcs": {
+    "label": "TCS",
+    "focusAreas": [
+      "OOP fundamentals",
+      "DBMS and SQL basics",
+      "Resume projects",
+      "Communication clarity",
+      "Client delivery mindset"
+    ],
+    "notes": [
+      "Prepare concise project walkthroughs and be ready to explain basics with simple examples."
+    ]
+  },
+  "infosys": {
+    "label": "Infosys",
+    "focusAreas": [
+      "Programming fundamentals",
+      "DBMS and SQL",
+      "Problem-solving steps",
+      "Training readiness",
+      "Communication"
+    ],
+    "notes": [
+      "Focus on explaining your learning process and how you apply fundamentals in projects."
+    ]
+  },
+  "accenture": {
+    "label": "Accenture",
+    "focusAreas": [
+      "Project ownership",
+      "Cloud and API basics",
+      "Client scenario thinking",
+      "Team collaboration",
+      "Adaptability"
+    ],
+    "notes": [
+      "Practice connecting technical choices to business outcomes and delivery constraints."
+    ]
+  },
+  "deloitte": {
+    "label": "Deloitte",
+    "focusAreas": [
+      "Analytical thinking",
+      "Data handling",
+      "Consulting communication",
+      "Scenario-based problem solving",
+      "Resume impact"
+    ],
+    "notes": [
+      "Prepare business-context examples, not only implementation details."
+    ]
+  },
+  "amazon": {
+    "label": "Amazon",
+    "focusAreas": [
+      "Data structures and algorithms",
+      "System design basics",
+      "Ownership stories",
+      "Debugging and scalability",
+      "Customer impact"
+    ],
+    "notes": [
+      "Prepare STAR stories with measurable impact and trade-off reasoning."
+    ]
+  },
+  "microsoft": {
+    "label": "Microsoft",
+    "focusAreas": [
+      "Problem-solving clarity",
+      "Design trade-offs",
+      "Collaboration stories",
+      "Product thinking",
+      "Technical depth in projects"
+    ],
+    "notes": [
+      "Practice explaining how you evaluate alternatives before choosing an approach."
+    ]
+  },
+  "google": {
+    "label": "Google",
+    "focusAreas": [
+      "Algorithms and complexity",
+      "System design fundamentals",
+      "Code quality",
+      "Scalable thinking",
+      "Structured communication"
+    ],
+    "notes": [
+      "Emphasize clear reasoning, edge cases, and why your solution is correct."
+    ]
+  },
+  "jpmorgan-chase": {
+    "label": "JPMorgan Chase",
+    "focusAreas": [
+      "Java or Python fundamentals",
+      "SQL and data modeling",
+      "Secure API design",
+      "Reliability",
+      "Financial domain awareness"
+    ],
+    "notes": [
+      "Prepare examples that show care for correctness, security, and production reliability."
+    ]
+  }
+}

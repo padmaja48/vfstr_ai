@@ -1,0 +1,174 @@
+.app-toast-stack {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(380px, calc(100vw - 24px));
+  pointer-events: none;
+}
+
+.app-toast {
+  pointer-events: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 10px;
+  padding: 12px 12px 12px 14px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 28px rgba(29, 78, 216, 0.12);
+  backdrop-filter: blur(8px);
+  animation: app-toast-in 0.28s ease;
+}
+
+.app-toast-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.app-toast-message {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 550;
+  word-break: break-word;
+}
+
+.app-toast-dismiss {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  opacity: 0.55;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.app-toast-dismiss:hover {
+  opacity: 0.9;
+}
+
+.app-toast--success {
+  background: #ecfdf3;
+  color: #14532d;
+  border-color: #bbf7d0;
+}
+
+.app-toast--success .app-toast-icon {
+  background: #16a34a;
+  color: #fff;
+}
+
+.app-toast--error {
+  background: #fef2f2;
+  color: #7f1d1d;
+  border-color: #fecaca;
+}
+
+.app-toast--error .app-toast-icon {
+  background: #dc2626;
+  color: #fff;
+}
+
+.app-toast--warning {
+  background: #fffbeb;
+  color: #78350f;
+  border-color: #fde68a;
+}
+
+.app-toast--warning .app-toast-icon {
+  background: #d97706;
+  color: #fff;
+}
+
+.app-toast--info {
+  background: #eff6ff;
+  color: #115e59;
+  border-color: #bfdbfe;
+}
+
+.app-toast--info .app-toast-icon {
+  background: #1e3a8a;
+  color: #fff;
+}
+
+/* Admin save confirmations — teal accent border/icon */
+.app-toast.app-toast--teal {
+  background: #eff6ff;
+  color: #0b1b3d;
+  border-color: #2563eb;
+}
+
+.app-toast.app-toast--teal .app-toast-icon {
+  background: #2563eb;
+  color: #fff;
+}
+
+.app-toast.app-toast--teal-warn {
+  background: #fffbeb;
+  color: #78350f;
+  border-color: #d97706;
+}
+
+.app-toast.app-toast--teal-warn .app-toast-icon {
+  background: #d97706;
+  color: #fff;
+}
+
+[data-theme='dark'] .app-toast--success {
+  background: #143528;
+  color: #bbf7d0;
+  border-color: #1f4d38;
+}
+
+[data-theme='dark'] .app-toast--error {
+  background: #3f1515;
+  color: #fecaca;
+  border-color: #7f1d1d;
+}
+
+[data-theme='dark'] .app-toast--warning {
+  background: #3b2a12;
+  color: #fde68a;
+  border-color: #92400e;
+}
+
+[data-theme='dark'] .app-toast--info {
+  background: #0b1b3d;
+  color: #bfdbfe;
+  border-color: #1e3a8a;
+}
+
+@keyframes app-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-toast-stack {
+    top: auto;
+    bottom: 16px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+}

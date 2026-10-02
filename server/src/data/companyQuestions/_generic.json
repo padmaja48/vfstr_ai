@@ -1,0 +1,114 @@
+{
+  "company": "Generic Industry Pool",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Walk me through a project from your resume end-to-end: problem, your role, architecture, and outcome.",
+          "type": "technical",
+          "source": "industry standard"
+        },
+        {
+          "question": "Given a list of intervals, merge overlapping intervals. Explain your approach and complexity.",
+          "type": "coding",
+          "source": "industry standard"
+        },
+        {
+          "question": "Tell me about a time you had to prioritize multiple tasks with competing deadlines.",
+          "type": "behavioral",
+          "source": "industry standard"
+        },
+        {
+          "question": "How would you design a REST API for a todo application? Cover endpoints, auth, and data model.",
+          "type": "system_design",
+          "source": "industry standard"
+        },
+        {
+          "question": "Explain how hash maps work internally and when collision handling matters.",
+          "type": "technical",
+          "source": "industry standard"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Describe a system you built that needed to scale. What broke first and how did you fix it?",
+          "type": "technical",
+          "source": "industry standard"
+        },
+        {
+          "question": "Design a chat application supporting group messaging and online presence.",
+          "type": "system_design",
+          "source": "industry standard"
+        },
+        {
+          "question": "Tell me about a technical trade-off you made that you would reconsider today.",
+          "type": "behavioral",
+          "source": "industry standard"
+        }
+      ]
+    },
+    "Frontend Engineer": {
+      "fresher": [
+        {
+          "question": "Explain how the browser renders a page from HTML/CSS to pixels on screen.",
+          "type": "technical",
+          "source": "industry standard"
+        },
+        {
+          "question": "How would you optimize a React app that re-renders too frequently?",
+          "type": "technical",
+          "source": "industry standard"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design the frontend architecture for a large dashboard with real-time data updates.",
+          "type": "system_design",
+          "source": "industry standard"
+        }
+      ]
+    },
+    "Backend Engineer": {
+      "fresher": [
+        {
+          "question": "Explain idempotency in REST APIs and give an example where it matters.",
+          "type": "technical",
+          "source": "industry standard"
+        },
+        {
+          "question": "How would you prevent race conditions when updating a shared counter in a database?",
+          "type": "technical",
+          "source": "industry standard"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design an order processing pipeline that guarantees at-least-once delivery.",
+          "type": "system_design",
+          "source": "industry standard"
+        }
+      ]
+    },
+    "Data Analyst": {
+      "fresher": [
+        {
+          "question": "Write a SQL query to find the top 3 products by revenue in each category.",
+          "type": "coding",
+          "source": "industry standard"
+        },
+        {
+          "question": "Tell me about an analysis where your initial hypothesis was wrong. What did you do next?",
+          "type": "behavioral",
+          "source": "industry standard"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "How would you design a metrics dashboard for an e-commerce funnel?",
+          "type": "system_design",
+          "source": "industry standard"
+        }
+      ]
+    }
+  }
+}

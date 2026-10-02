@@ -1,0 +1,206 @@
+.account-setup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(29, 78, 216, 0.18), transparent 46%),
+    color-mix(in srgb, #0b1f1c 72%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.account-setup-popover {
+  width: min(640px, 100%);
+  max-height: min(92vh, 860px);
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, #3b82f6 28%, #c8d3e6);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 252, 251, 0.98));
+  box-shadow:
+    0 24px 60px rgba(8, 32, 28, 0.28),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  padding: 28px 28px 24px;
+}
+
+.account-setup-head {
+  margin-bottom: 22px;
+}
+
+.account-setup-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  background: color-mix(in srgb, #3b82f6 16%, #fff);
+  border: 1px solid color-mix(in srgb, #3b82f6 28%, transparent);
+}
+
+.account-setup-head h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  line-height: 1.2;
+  color: #0f2f2b;
+}
+
+.account-setup-head p {
+  margin: 0;
+  color: #4b635f;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.account-setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-setup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+.account-setup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: #35554f;
+}
+
+.account-setup-field input {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid #c9dbd6;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #12332e;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.account-setup-field input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #3b82f6 18%, transparent);
+}
+
+.account-setup-password {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.account-setup-password input {
+  padding-right: 46px;
+}
+
+.account-setup-eye {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #6b8580;
+  cursor: pointer;
+}
+
+.account-setup-eye:hover {
+  color: #1e3a8a;
+  background: color-mix(in srgb, #3b82f6 12%, transparent);
+}
+
+.account-setup-error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.account-setup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.account-setup-primary,
+.account-setup-secondary {
+  min-height: 44px;
+  border-radius: 12px;
+  padding: 0 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-setup-secondary {
+  border: 1px solid #c9dbd6;
+  background: #fff;
+  color: #35554f;
+}
+
+.account-setup-secondary:hover:not(:disabled) {
+  background: #f3faf8;
+}
+
+.account-setup-primary {
+  border: 1px solid color-mix(in srgb, #1e3a8a 70%, transparent);
+  background: linear-gradient(145deg, #3b82f6 0%, #1e3a8a 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px color-mix(in srgb, #3b82f6 30%, transparent);
+}
+
+.account-setup-primary:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+
+.account-setup-primary:disabled,
+.account-setup-secondary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .account-setup-popover {
+    padding: 22px 16px 18px;
+    border-radius: 10px;
+  }
+
+  .account-setup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-setup-actions {
+    flex-direction: column-reverse;
+  }
+
+  .account-setup-primary,
+  .account-setup-secondary {
+    width: 100%;
+  }
+}

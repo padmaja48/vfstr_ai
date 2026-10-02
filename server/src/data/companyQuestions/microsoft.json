@@ -1,0 +1,41 @@
+{
+  "company": "Microsoft",
+  "roles": {
+    "Software Engineer": {
+      "fresher": [
+        {
+          "question": "Reverse a linked list iteratively and recursively. Compare both approaches.",
+          "type": "coding",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Tell me about a project where you had to work with incomplete requirements. How did you proceed?",
+          "type": "behavioral",
+          "source": "reported 2024"
+        },
+        {
+          "question": "How would you design a file storage service like OneDrive for personal users?",
+          "type": "system_design",
+          "source": "reported 2023"
+        },
+        {
+          "question": "Explain how garbage collection works in managed languages and why it matters for performance.",
+          "type": "technical",
+          "source": "reported 2024"
+        }
+      ],
+      "experienced": [
+        {
+          "question": "Design a distributed logging system that aggregates logs from thousands of microservices.",
+          "type": "system_design",
+          "source": "reported 2024"
+        },
+        {
+          "question": "Tell me about a time you mentored a junior engineer through a difficult technical problem.",
+          "type": "behavioral",
+          "source": "reported 2024"
+        }
+      ]
+    }
+  }
+}
