@@ -1,12 +1,27 @@
-import * as blazeface from '@tensorflow-models/blazeface';
+import * as tf from '@tensorflow/tfjs-core';
 import '@tensorflow/tfjs-backend-webgl';
+import * as blazeface from '@tensorflow-models/blazeface';
 
 let modelPromise = null;
 
+const initBackend = async () => {
+  try {
+    await tf.setBackend('webgl');
+  } catch {
+    // WebGL unavailable (some locked-down browsers) — CPU still works, just slower.
+    await tf.setBackend('cpu');
+  }
+  await tf.ready();
+};
+
 export const preloadFacePresenceModel = () => {
   if (!modelPromise) {
-    modelPromise = blazeface.load({ maxFaces: 3 }).catch((error) => {
+    modelPromise = (async () => {
+      await initBackend();
+      return blazeface.load({ maxFaces: 3 });
+    })().catch((error) => {
       modelPromise = null;
+      console.error('Face detection model failed to load', error);
       throw error;
     });
   }

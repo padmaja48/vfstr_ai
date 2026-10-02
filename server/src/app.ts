@@ -33,9 +33,21 @@ export const createApp = () => {
   app.use(
     helmet({
       contentSecurityPolicy: {
+        useDefaults: true,
         directives: {
+          // TF.js compiles shaders / kernels; BlazeFace fetches model weights from Google Storage.
+          scriptSrc: ["'self'", "'unsafe-eval'", 'blob:'],
+          connectSrc: [
+            "'self'",
+            'blob:',
+            'https://storage.googleapis.com',
+            'https://tfhub.dev',
+            'https://www.kaggle.com',
+          ],
+          workerSrc: ["'self'", 'blob:'],
+          childSrc: ["'self'", 'blob:'],
           imgSrc: ["'self'", 'data:', 'blob:', 'https:'],
-          mediaSrc: ["'self'", 'data:', 'blob:'],
+          mediaSrc: ["'self'", 'data:', 'blob:', 'mediastream:'],
         },
       },
       hsts: env.NODE_ENV === 'production' ? undefined : false,
