@@ -8,17 +8,30 @@ type RedisLike = IORedis | MemoryRedis;
 let redisClient: RedisLike | null = null;
 let queueRedisClient: RedisLike | null = null;
 
-export const isMemoryRedis = () => env.REDIS_URL.startsWith('memory://');
+const isLocalRedisUrl = (url: string) =>
+  /^redis(s)?:\/\/(localhost|127\.0\.0\.1)(:|\/|$)/i.test(url);
+
+export const isMemoryRedis = () =>
+  env.REDIS_URL.startsWith('memory://') ||
+  (env.NODE_ENV === 'production' && isLocalRedisUrl(env.REDIS_URL));
 
 const createClient = () => {
   if (isMemoryRedis()) {
-    logger.warn('Using in-memory Redis adapter. This is for local development/testing only.');
+    if (isLocalRedisUrl(env.REDIS_URL)) {
+      logger.warn(
+        { redisUrl: env.REDIS_URL },
+        'REDIS_URL points at localhost in production — using in-memory Redis so login does not hang.',
+      );
+    } else {
+      logger.warn('Using in-memory Redis adapter. This is for local development/testing only.');
+    }
     return new MemoryRedis();
   }
 
   const client = new IORedis(env.REDIS_URL, {
-    maxRetriesPerRequest: null,
+    maxRetriesPerRequest: 1,
     enableReadyCheck: false,
+    connectTimeout: 5000,
     keyPrefix: '',
   });
 

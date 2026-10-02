@@ -49,7 +49,9 @@ const envSchema = z.object({
   GOOGLE_CLIENT_ID: optionalString,
   GOOGLE_CLIENT_SECRET: optionalString,
   GOOGLE_CALLBACK_URL: defaultedString('http://localhost:4000/api/v1/auth/google/callback'),
-  REDIS_URL: defaultedString('redis://localhost:6379'),
+  // Prefer in-memory Redis unless a real host is configured. On Render, the old
+  // redis://localhost default hangs forever during login session writes.
+  REDIS_URL: defaultedString('memory://local'),
   BULLMQ_PREFIX: defaultedString('fluentai'),
   RESEND_API_KEY: optionalString,
   SMTP_URL: optionalString,
