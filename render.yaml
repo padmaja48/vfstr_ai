@@ -3,12 +3,26 @@ services:
     name: fluent-ai
     runtime: node
     plan: free
+    region: singapore
+    branch: main
     buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION
-        value: 22.12.0
+        value: "22.12.0"
+      - key: NODE_ENV
+        value: production
+      - key: AI_CALLS_ENABLED
+        value: "true"
+      - key: AI_PROVIDER
+        value: openai
+      - key: REDIS_URL
+        value: memory://local
+      - key: BULLMQ_PREFIX
+        value: fluentai
+      - key: EMAIL_FROM
+        value: ProGrow MockAI <noreply@progrowmockai.in>
       - key: MONGODB_URI
         sync: false
       - key: JWT_SECRET
@@ -19,15 +33,23 @@ services:
         generateValue: true
       - key: COOKIE_SECRET
         generateValue: true
-      - key: REDIS_URL
+      - key: OPENAI_API_KEY
         sync: false
       - key: GROQ_API_KEY
         sync: false
-      - key: GOOGLE_CLIENT_ID
-        sync: false
-      - key: GOOGLE_CLIENT_SECRET
-        sync: false
       - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID
+        sync: false
+      - key: ELEVENLABS_PROFESSIONAL_FEMALE_VOICE_ID
+        sync: false
+      - key: ELEVENLABS_PROFESSIONAL_MALE_VOICE_ID
+        sync: false
+      - key: ELEVENLABS_NEUTRAL_VOICE_ID
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
         sync: false
       - key: CLOUDINARY_CLOUD_NAME
         sync: false
@@ -35,5 +57,11 @@ services:
         sync: false
       - key: CLOUDINARY_API_SECRET
         sync: false
-      - key: RESEND_API_KEY
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: CORS_ORIGINS
         sync: false
